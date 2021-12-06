@@ -101,6 +101,7 @@ class SportsWalking(Training):
                           )
         return spent_calories
 
+
 class Swimming(Training):
     """Тренировка: плавание."""
     LEN_STEP = 1.38
@@ -145,11 +146,10 @@ def read_package(workout_type: str, data: list) -> Training:
         'WLK': SportsWalking,
         'SWM': Swimming,
     }
-    #определяем класс тренировки
+    # определяем класс тренировки
     workout = workouts[workout_type]
-    #создаем объект соотв. класса
+    # создаем объект соотв. класса
     training: workout = workout(*data)
-    #создаем объект класса Training
     return training
 
 
