@@ -130,7 +130,7 @@ def read_package(workout_type: str, data: list) -> Training:
     try:
         if workout_type not in workouts:
             raise KeyError('Неизвестный тип тренировки')
-    except:
+    except KeyError:
         raise
     else:
         # определяем класс тренировки
